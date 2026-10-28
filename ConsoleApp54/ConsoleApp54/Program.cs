@@ -18,7 +18,8 @@ namespace ConsoleApp54
             int result;
             string res;
             //запись знака
-            char sign;
+            int choise;
+            Char sign;
             //обработка числаэ
             number1 = Int32.Parse(
             Interaction.InputBox(
@@ -33,31 +34,41 @@ namespace ConsoleApp54
             )
             );
 
-            Interaction.InputBox(
-            "введите знак ",
+            //знак по умолчанию
+            choise = Int32.Parse(
+             Interaction.InputBox(
+            "введите номер операции которую хотите ",
             "добро пожаловать"
+            )
             );
-            switch(number1)
+            char sign1;
+
+
+            switch (choise)
             {
                 case 1:
+                choise = 1;
                 sign = '+';
                 result = number1 + number2;
                 res = $"ваш результат {result}";
                 break;
 
                 case 2:
+                choise = 1;
                 sign = '-';
                 result = number1 - number2;
                 res = $"ваш результат {result}";
                 break;
 
                 case 3:
+                choise = 1;
                 sign = '*';
                 result = number1 * number2;
                 res = $"ваш результат {result}";
                 break;
 
                 case 4:
+                choise = 1;
                 sign = '/';
                 result = number1 / number2;
                 res = $"ваш результат {result}";
@@ -65,11 +76,10 @@ namespace ConsoleApp54
 
                 default:
                  //текси сообщения
-                 result = 0;
                  res = "вы не ввели данные числа и знак";
                  break;
             }
-            MessageBox.Show($"ваш результат ," +result+"!");
+            MessageBox.Show($"ваш результат {res}");
            
         }
     }
