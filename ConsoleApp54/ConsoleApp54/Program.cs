@@ -66,10 +66,11 @@ namespace ConsoleApp54
                 default:
                  //текси сообщения
                  result = 0;
-
+                 res = "вы не ввели данные числа и знак";
                  break;
             }
             MessageBox.Show($"ваш результат ," +result+"!");
+           
         }
     }
 }
