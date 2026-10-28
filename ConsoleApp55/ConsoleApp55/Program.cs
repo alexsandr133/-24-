@@ -11,21 +11,22 @@ namespace ConsoleApp55
         static void Main(string[] args)
         {
             Console.WriteLine("привествую вас пользователь");
-            Console.WriteLine("введите возраст");
             int age;
             int price = 500;
-            int skidka = price * 100 / 20;
-            int skidka1 = price * 100 / 10;
+            int skidka = price * 20 / 100;
+            int skidka1 = price * 10 / 100;
             int res = skidka + skidka1;
             string day;
+            Console.WriteLine("введите день");
             day = Console.ReadLine();
             int result;
+            Console.WriteLine("введите возраст");
             age = Convert.ToInt32(Console.ReadLine());
-            if (age == 18 && age == 65)
+            if (age == 18 || age == 65)
             {
                 Console.WriteLine($"ваш билет со скидкой {skidka} и билет {price} ");
             }
-            else if (day == "monday" && day == "wensday" )
+            else if (day == "monday" || day == "wensday" )
             {
                 Console.WriteLine($"ваша скидка по дням {res} и билет {price}");
             }
